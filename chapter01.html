@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chapter01</title>
+</head>
+<body>
+
+	<!-- js event -->
+	 <button class="btn btn-primary" onclick="jalan()" name="button">
+	 	Jalan
+	 </button>
+
+	 <!-- log event --> 
+	  <button class="btn btn-primary" onclick="jalanscript()" name="button">
+	 	Jalan Script
+	  </button>
+
+	 <!-- menyeleksi elemen dom dengan getelemen id -->
+	 <input type="text" name="" id="namadepan" value="yusril">
+	 <input type="text" name="" id="namabelakang" value="mahendri">
+
+	  <button class="btn btn-primary" onclick="send()" name="button">
+	 	send
+	  </button>
+
+	  <br>
+
+	  <!-- menyeleksi element dom dengan getElemenByClassName -->
+	   <input type="text" class="middle" name="" value="mahendri yusril">
+	  <button class="btn btn-primary" onclick="kirim()" name="button">
+	 	kirim
+	  </button>
+       
+
+	
+	<script type="text/javascript">
+		 // event 
+		 function jalan(){
+		 	alert("sukses");
+		 }
+         
+         // log event
+		 function jalanscript(){
+		 	console.log('sukses ya');
+		 }
+
+         // menyeleksi elemen dom dengan get elemen id
+		 function send(){
+		 	console.log(document.getElementById("namadepan"));
+		 	console.log(document.getElementById("namabelakang"));
+		 }
+
+		 //menyeleksi element dom dengan getElemenByClassName
+		 function kirim(){
+		 	console.log(document.getElementsByClassName("middle"));
+		 }
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<!-- on mouseover & mouseout -->
+	<p onmouseover="zoomin(this)" onmouseout="zoomout(this)">Dekatkan Mouse ke  tulisan ini</p><br><br>
+
+	<!-- geolocation posisi koordinat -->
+    <p>Click tombol ini untuk mendapatkan koordinat lokasi</p>
+    <button onclick="getLocation()">coba dapatkan lokasi</button>
+    <p id="lokasi"> </p>
+
+	<script type="text/javascript">
+		//on mouseover & mouseout
+		function zoomin(x){
+			x.style.fontSize = "20pt";
+		}
+		function zoomout(x){
+            x.style.fontSize = "20pt";
+		}
+
+		//geolocation posisi koordinat
+		var x = document.getElementById("lokasi");
+		function getLocation(){
+           if (navigator.geolocation) {
+           	 navigator.geolocation.getCurrentPosition(tunjukanPosisi);
+           }
+           else {
+           	  x.innerHTML = "geolocation tidak support browser";
+           }
+		}
+		function tunjukanPosisi(position){
+             x.innerHTML = "Latitude : "+ position.coords.latitude  "<br>Longtitude : "+ position.coords.longitude;
+		}
+	</script>
+</body>
+</html>

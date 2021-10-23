@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		.contohcss{
+			color: blue;
+		}
+	</style>
+</head>
+<body onclick="here()">
+	<!-- attribute removeNamedItem --> 
+	<p>attribute removeNamedItem</p>
+	<button type="button" onclick="tombol()" name="button">klik</button>
+	<br>
+	<input type="button" value="SIAP"/>
+
+	<!-- attribute setNamedItem() -->
+	<p>attribute setNamedItem</p> 
+	<button type="button" onclick="klik()" name="button">click</button>
+	<h1>Hello, World!</h1>
+
+	<!-- attribute value --> 
+	<p>attribute value</p>
+	<button type="button" onclick="vale()" name="siKlik">click here!</button>
+	<br>
+	<p id="contoh">contoh</p>
+
+	<!-- active element property --> 
+	<p>active element property</p>
+	<p>Nama Lengkap<input type="text"  value="field"><button>Tekan</button></p>
+	<p id="con">Contoh</p>
+
+	<!-- fungsi addEventListenerProperty --> 
+	<p>fungsi addEventListenerProperty</p>
+	<p id="uh">ubah</p>
+
+	<script type="text/javascript">
+		// attribute removedNamedItem
+		function tombol(){
+			var a = document.getElementsByTagName("input")[0];
+			a.attributes.removeNamedItem("value");
+		}
+
+		// attribute setNamedItem()
+		function klik(){
+			var a = document.getElementsByTagName("h1")[0];
+			var b = document.createAttribute("class");
+			b.value = "contohcss";
+			a.attributes.setNamedItem(b);
+		}
+
+		// attribute value
+		function vale(){
+			var ab = document.getElementsByTagName("button")[0];
+			var ac = ab.attributes[1].value;
+			document.getElementById("contoh").innerHTML = ac;
+		}
+
+		// active element property
+        function here(){
+        	var ba = document.activeElement.tagName;
+        	document.getElementById("con").innerHTML = ba;
+        }  
+
+        // fungsi addEventListenerProperty
+        document.addEventListener("click", function(){
+        	document.getElementById("uh").innerHTML = "sukses berhasil diubah";
+        });
+
+
+
+	</script>
+	
+</body>
+</html>

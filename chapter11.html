@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<!-- item html collection -->
+	<h1>HTML collectionitem method</h1>
+	<p>paragraf pertama</p>
+	<p>paragraf kedua</p>
+	<button onclick="item_method()">tombol alert</button>
+
+   <script type="text/javascript">
+   	//item html collection
+   	  function item_method(){
+   	  	var x = document.getElementsByTagName("p");
+   	  	alert(x.item(0).innerHTML)
+        
+        //length html collection
+        alert(x.length);
+
+        for(var i = 0; i < x.length; i++){
+        	alert(x.item(i).innerHTML)
+        }
+   	  }
+
+  
+   </script>
+</body>
+</html>

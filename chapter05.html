@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+     <!-- body property -->
+     <button onclick="tombol()">Ubah Warna</button><br><br>
+  
+
+     <!-- Document Cookie  -->
+     <button onclick="kil()">Cookie</button>
+     <p id="contoh">contoh</p>
+
+     <!-- Document URL -->
+     <button onclick="bil()">ambil url</button>
+     <p id="ambil">url</p>
+
+	<script type="text/javascript">
+		// body property
+		function tombol(){
+			
+			document.body.style.backgroundColor = "yellow";
+		}
+
+		// Document Cookie 
+		function kil(){
+                document.cookie = "username:admin";
+                var ab = document.cookie;
+                document.getElementById("contoh").innerHTML = 'cookie = ' + ab;
+		}
+
+		//document url
+		function bil(){
+			var a = document.documentURI;
+			document.getElementById("ambil").innerHTML = a;
+		}
+
+
+	</script>
+</body>
+</html>

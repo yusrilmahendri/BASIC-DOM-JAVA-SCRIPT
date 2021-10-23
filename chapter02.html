@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Js Dom</title>
+</head>
+<body>
+	<!-- menyeleksi element DOM dengan getElementByTagName --> 
+      <input type="text" name="" value="yusril">
+      <button type="button" name="button" onclick="jalan()">
+         submit	
+      </button>
+
+    <!-- menyeleksi element DOM bedasarkan selector -->
+      <input type="text" name="" class="hy" value="yusril">
+      <button type="button" name="button" onclick="jalanscript()">
+         submit	
+      </button>    
+
+      <br>
+      <!-- atribute item -->
+      <p>ubah atribute, click here!</p>
+      <button type="button" name="button" onclick="ubah()">ubah</button>
+      <p id="contoh">contoh</p>
+
+      <br><p>attribut getNamedItem</p>
+      <!-- attribut getNamedItem -->
+      <button onclick="rename()" type="button" name="button">click here!</button>
+      <p id="ubah">ubah</p>
+
+      <!-- atribute length -->
+      <br><p>aribute length</p>
+      <button onclick="tombol()" type="button" name="button">
+      	hitung value atribute
+      </button>
+      <p id="hitung">hitung</p>
+
+
+      <!-- atribute name -->
+      <br><p>aribute name</p>
+      <button onclick="add()" type="button" name="button">
+      	atribut name
+      </button>
+      <p id="named">hitung</p>
+
+
+
+	<script type="text/javascript">
+		//menyeleksi element DOM dengan getElementByTagName
+		function jalan(){
+			console.log(document.getElementsByTagName("input"));
+		}
+
+		//menyeleksi element DOM bedasarkan selector
+		function jalanscript(){
+			console.log(document.querySelector(".hy"));
+		}
+
+		//atribute item
+		function ubah(){
+			var a = document.getElementsByTagName("button")[0];
+			var b = a.attributes.item(0).name;
+
+			document.getElementById("contoh").innerHTML = b;
+		}
+
+		// attribut getNamedItem
+		function rename(){
+			var ab = document.getElementsByTagName("button")[0];
+			var ac = ab.attributes.getNamedItem("name").value;
+
+			document.getElementById("ubah").innerHTML = ac;
+		}
+
+		//attribut length
+		function tombol(){
+			var ba = document.getElementsByTagName("button")[0];
+			var bc = ba.attributes.length;
+
+			document.getElementById("hitung").innerHTML = bc;
+		}
+
+		//attribute name
+		function add(){
+			var ca = document.getElementsByTagName("button")[0];
+			var cb = ca.attributes[1].name;
+
+			document.getElementById("named").innerHTML = cb;
+		}
+
+	</script>
+</body>
+</html>

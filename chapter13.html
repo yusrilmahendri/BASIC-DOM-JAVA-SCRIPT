@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<!-- alert confirm window -->
+	<button onclick="saya()">Klik Saya</button>
+	  <p id="hasil"></p>
+
+	<!-- open window -->
+	<button onclick="kunjungi()">Kunjungi saya</button>
+
+	<!-- close window -->
+    <button onclick="buka()">buka window</button>
+    <button onclick="tutup()">tutup window</button>
+
+    <!-- print window -->
+    <br><br>
+    <p>cetak di layar!</p>
+    <button onclick="cetak()">cetak</button>
+
+	<script>
+     //alert confirm window
+		function saya(){
+          var text;
+          var r = confirm("anda yakin ?");
+          if (r == true){
+          	text = "Kamu yakin ?";
+          }
+          else {
+          	text = "tidak yakin!";
+          }
+          document.getElementById("hasil").innerHTML = text;
+		}
+
+		//open window 
+	   function kunjungi(){
+	   	   window.open("https://www.google.com");
+	   }
+
+	   //close window
+	   var myWindow;
+
+	   function buka(){
+            myWindow =window.open("","yusril","width=500,height=500");
+            myWindow.document.write("<p>anda berhasil buka window</p>");
+	   }
+	   function tutup(){
+	   	 myWindow.close();
+	   }
+
+	   //window print
+	   function cetak(){
+	   	 window.print();
+	   }
+	</script>
+</body>
+</html>

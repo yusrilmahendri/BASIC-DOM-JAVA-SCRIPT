@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<!-- hash location -->
+	<p id="hash"></p>
+	<button onclick="hash_location()">Panggil Anchor</button>
+
+	<!-- host name location -->
+	<p id="hostname"></p>
+	<button onclick="lihat_hostname()">host name</button>
+
+	<!-- href location -->
+	<p id="href"></p>
+	<button onclick="lihat_href()">href</button>
+	
+	<script type="text/javascript">
+		//hash location
+		function hash_location(){
+          location.hash = "yusril";
+         var x = "sekarang anchornya : " + location.hash;
+         document.getElementById("hash").innerHTML = x;
+		}
+
+		//host name location
+		function lihat_hostname(){
+			var y = location.hostname;
+			document.getElementById("hostname").innerHTML = y;
+		}
+
+		//href location
+		function lihat_href(){
+           var xy = location.href;
+           document.getElementById("href").innerHTML = xy;
+		}
+	</script>
+</body>
+</html>

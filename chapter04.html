@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<!-- document open dan close property -->
+	<p>document open dan close property</p>
+	<button type="button" onclick="tombol()">click</button><br>
+
+	<!-- anchor property --> 
+	<p>anchor property</p>
+	<a href="#" name="jawa">jawa</a>
+	<a href="#" name="bangka">Bangka</a>
+	<p id="total">total link</p>
+	<button onclick="hitong()" type="button">hitung</button><br>
+
+	<!-- base uri property --> 
+	<p> base uri property</p>
+	<p id="url">ambil url</p>
+	<button onclick="uri()">cari link url</button>
+  
+	<script type="text/javascript">
+
+		// document open dan close property
+		function tombol(){
+			document.open();
+			document.write("<h1>sukses</h1>");
+			document.close();
+		}
+
+		//  anchor property
+		function hitong(){
+			var a = document.anchors.length;
+			document.getElementById("total").innerHTML = a;
+		}
+
+		//  base uri property
+		function uri(){
+			var b = document.baseURI;
+			document.getElementById("url").innerHTML = b;
+		}
+
+	</script>
+</body>
+</html>

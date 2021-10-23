@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body onload="tampil()">
+	<!-- create elemen -->
+	<button onclick="tombol()">tambah fitur</button>
+
+    <!-- on click event -->
+    <button onclick="click_saya()">on clik event</button>
+    <p id="clicked"> </p>
+
+    <!-- on double click event -->
+    <button ondblclick="double()">doble click!</button>
+
+    <!-- change event -->
+    <p>Pilih Menu Makanan</p>
+       <select id="menu" onchange="pilih()">
+       	  <option value="Nasi Goreng">Nasi Goreng</option>
+       	  <option value="Ayam Goreng">Ayam Goreng</option>
+       	  <option value="Ayam Bakar">Ayam Bakar</option>
+       	  <option value="pisang goreng">pisang goreng</option>
+       </select>
+       <p id="hasil"> </p>
+
+   	<!-- on load event -->
+   <script type="text/javascript" src="load.js"></script>
+   <script type="text/javascript">
+   	   function tombol(){
+   	   	  var a =  document.createElement("button");
+             a.innerHTML = "TOMBOL";
+             document.body.appendChild(a);
+   	   }
+
+   	   //on change event
+   	   function pilih(){
+   	   	var x = document.getElementById("menu").value;
+   	   	document.getElementById("hasil").innerHTML = "menu yang anda pilih :" + x;
+   	   }
+
+   </script>	
+</body>
+</html>

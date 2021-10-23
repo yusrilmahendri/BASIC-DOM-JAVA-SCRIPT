@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<!-- history back -->
+	<button onclick="goback()">go back(kembali)</button><br><br>
+
+	<!-- history forwad -->
+    <button onclick="goforwad()">go forwad(kedepan)</button><br>
+
+    <!-- history go -->
+    <br>
+    <button onclick="goHistory()">Go History</button>
+
+
+	<script type="text/javascript">
+		//history back
+		function goback(){
+           window.history.back();
+		}
+
+		//history forwad 
+		function goforwad(){
+			window.history.forward();
+		}
+
+		//history go
+		function goHistory(){
+			window.history.go(-2);
+		}
+
+	</script>
+</body>
+</html>

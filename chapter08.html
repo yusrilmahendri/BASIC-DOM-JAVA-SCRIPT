@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=o, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<!-- on error event -->
+	<img src="niomic.jpg" onerror="error_load()">
+	<p>Fungsi akan berjalan pada saat terdapat error</p><br><br>
+
+	<!-- on focus event --> 
+	masukan nama kamu :
+	<input type="text" onfocus="sedang_focus(this)">
+	<p>event ini akan berjalan pada saat inputan mendapatkan fokus</p><br><br>
+
+	<!-- key press event -->
+	<p>textbox akan berubah saat dilakukan key press event</p>
+	ini keypress : <input type="text" name="" onkeypress="ubah(this)">
+	ini keydown : <input type="text" name="" onkeydown="ubah(this)">
+	ini keyup : <input type="text" name="" onkeyup="ubah(this)">
+
+	
+
+
+<script type="text/javascript">
+	//on error event
+	function error_load(){
+		alert('error');
+	}
+
+	//on focus event
+	function sedang_focus(x){
+          x.style.background = "lightblue";
+	}
+
+	//key press event
+	function ubah(x){
+		x.style.background = "lightblue";
+	}
+</script>	
+</body>
+</html>
